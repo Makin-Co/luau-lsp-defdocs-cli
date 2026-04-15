@@ -1,0 +1,41 @@
+{
+    "@dsg/globaltype/Example": {
+        "documentation": "",
+        "code_sample": ""
+    },
+    "@dsg/globaltype/Example.CreatePlayerID": {
+        "documentation": "",
+        "params": [
+            {
+                "name": "player",
+                "documentation": ""
+            },
+            {
+                "name": "anotherPlayer",
+                "documentation": ""
+            }
+        ],
+        "returns": [
+            ""
+        ]
+    },
+    "@dsg/globaltype/Example.GenerateDeepPlayer": {
+        "documentation": "",
+        "params": [],
+        "returns": [
+            ""
+        ]
+    },
+    "@dsg/globaltype/Example.KillAllPlayers": {
+        "documentation": "",
+        "params": [
+            {
+                "name": "exceptions",
+                "documentation": ""
+            }
+        ],
+        "returns": [
+            ""
+        ]
+    }
+}
