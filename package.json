@@ -1,0 +1,36 @@
+{
+  "name": "luau-lsp-defdocs-cli",
+  "version": "1.0.0",
+  "description": "CLI tool for generating Luau definition &amp; documentation files from standard Luau source code used for LuauLSP",
+  "main": "dist/index.js",
+  "bin": {
+    "luau-defdocs": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Makin-Co/luau-lsp-defdocs-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Makin-Co/luau-lsp-defdocs-cli/issues"
+  },
+  "homepage": "https://github.com/Makin-Co/luau-lsp-defdocs-cli#readme",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "commander": "^14.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^6.0.2"
+  }
+}
