@@ -1,6 +1,6 @@
 {
   "name": "luau-lsp-defdocs-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "CLI tool for generating Luau definition &amp; documentation files from standard Luau source code used for LuauLSP",
   "main": "dist/index.js",
   "bin": {
