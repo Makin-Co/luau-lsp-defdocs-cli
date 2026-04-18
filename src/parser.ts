@@ -54,7 +54,7 @@ function extractFunctions(source: string, moduleName: string): FunctionInfo[] {
   // Match: function ModuleName.FuncName(...) or function ModuleName:MethodName(...)
   // Captures: separator (. or :), function name, full params string, optional return type
   const funcPattern = new RegExp(
-    `function\\s+${escaped}([.:])([A-Za-z_]\\w*)\\s*\\(([^)]*)\\)\\s*(?::\\s*(.+?))?\\s*$`,
+    `function\\s+${escaped}([.:])([A-Za-z_]\\w*)\\s*\\(([^)]*)\\)\\s*(?::\\s*(.+?))?\\s*(?:end)?\\s*$`,
     'gm',
   );
 
@@ -93,7 +93,7 @@ function parseParams(raw: string, isMethod: boolean): ParamInfo[] {
   for (const part of parts) {
     const trimmed = part.trim();
     if (!trimmed) continue;
-    if (isMethod && trimmed === 'self') continue;
+    if (trimmed === 'self' || trimmed.startsWith('self:')) continue;
 
     // Match: name: Type  or  name (no type)
     const paramMatch = trimmed.match(/^([A-Za-z_]\w*)\s*(?::\s*(.+))?$/);
